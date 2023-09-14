@@ -1,5 +1,5 @@
 # aihackathon
-**팀명: 팜하니** 
+**팀명: 팜하니** <br/>
 팀원: 박규연 (팀장), 윤하은, 정재준
 
 ## autogluon manual
