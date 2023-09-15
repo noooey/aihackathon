@@ -1,8 +1,8 @@
 # aihackathon
-**팀명: 팜하니** <br/>
+**팀명: 팜하니** 
 팀원: 박규연 (팀장), 윤하은, 정재준
 
-## autogluon manual
+## dependency install manual
 **conda env create 예시**
 ```python
 # conda create -n {env_name} pyhton=3.9 
@@ -14,6 +14,7 @@
 # pip install -U setuptools wheel
 ### default: autogluon==0.8.2
 # pip install autogluon  
+# pip install sklearn
 ```
 
 **how to use**
@@ -28,7 +29,7 @@
 ```python
 # brew install cmake
 ``` 
-   - 이 외의 의존성 문제는… 화이팅…!
+- - 이 외의 의존성 문제는… 화이팅…!
 - 원하는 만큼의 성능이 안 나올 시, autogluon 결과를 토대로 다른 모델을 강구해야 할 수 있음
 
 ## Citation:

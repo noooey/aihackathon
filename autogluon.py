@@ -15,10 +15,11 @@ label = 'label'
 
 # 'f1' for f1 score & 'root_mean_squared_error' for RMSE
 eval_metric = 'accuracy' 
-f1_metric = 'f1'
+r2_metric = 'r2'
 rmse_metic = 'root_mean_squared_error'
 
 #output_directory = './autogluon_model_logs' # output directory
+#predictor_directory = './autogluon_model_predict' # predictore directory
 
 # autogluon train
 predictor = TabularPredictor(
@@ -47,6 +48,8 @@ with open(log_path, 'w') as f:
     f.write(str(leaderboard))
 
 print(f"Logs saved to {log_path}")
+
+predictor.save(predictor_directory)
 
 model_to_use = predictor.get_model_best()
 model_pred = predictor.predict(test_data, model=model_to_use)
