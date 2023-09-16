@@ -8,4 +8,7 @@ sample/
 
 # autogluon result
 autogluonModels/
+<<<<<<< Updated upstream
 autogluon_model_logs/
+=======
+>>>>>>> Stashed changes

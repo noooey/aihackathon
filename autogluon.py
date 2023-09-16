@@ -8,7 +8,11 @@ from autogluon.tabular import TabularDataset, TabularPredictor
 import pandas as pd
 import os
 
+<<<<<<< Updated upstream
 train_df = pd.read_csv('2023_smartFarm_AI_hackathon_dataset.csv') # input for train dataset
+=======
+train_df = pd.read_csv('./2023_smartFarm_AI_hackathon_dataset.csv') # input for train dataset
+>>>>>>> Stashed changes
 # test_data = pd.read_csv('./test data location.csv')
 train_data = TabularDataset(train_df)
 time_limit = 3600 * 1 # hrs
@@ -24,12 +28,20 @@ predictor_directory = './autogluon_model_predict' # predictore directory
 
 # autogluon train
 predictor = TabularPredictor(
+<<<<<<< Updated upstream
     label=label, eval_metric=rmse_metric
+=======
+    label=label, eval_metric=rmse_metic
+>>>>>>> Stashed changes
 ).fit(
     train_data,
     presets='best_quality', 
     time_limit=time_limit, 
+<<<<<<< Updated upstream
     ag_args_fit={'num_gpus': 0, 'num_cpus': 8},
+=======
+    ag_args_fit={'num_gpus': 0, 'num_cpus': 8}
+>>>>>>> Stashed changes
     # training for a specific model ref: 'https://auto.gluon.ai/stable/api/autogluon.tabular.TabularPredictor.fit.html'
     hyperparameters={'GBM': {}},
     num_bag_folds=2,      
