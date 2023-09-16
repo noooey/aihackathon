@@ -1,6 +1,10 @@
 # train log & result dump files
 
 # datasets
+*.csv
 
 # sample model and dataset
 sample/
+
+# autogluon result
+autogluonModels/
