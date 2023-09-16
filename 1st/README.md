@@ -16,5 +16,9 @@
 - 아직 전처리 X
 - autogluon 써도 되는지?
 
+## 등수
+이제 안 봐줌
+![image](https://github.com/noooey/aihackathon/assets/66217855/9a55ccf8-e87f-4fd4-8ced-449f36dd87b6)
+
 ---
 `팀명` 팜하니 | `대표자명` 박규연
