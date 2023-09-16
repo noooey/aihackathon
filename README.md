@@ -55,7 +55,6 @@
 │   ├── model_4.ipynb
 │   └── README.md
 └── README.md
-```
 
 ## dependency install manual
 **conda env create 예시**
