@@ -71,10 +71,15 @@
 # pip install sklearn
 ```
 
-**how to use**
+**how to train**
 ```python
 # python autogluon.py
 
+```
+
+**how to evaluate**
+```python
+# TBD
 ```
 
 ### autogluon trouble shooting
@@ -86,6 +91,11 @@
 - - 이 외의 의존성 문제는… 화이팅…!
 - 원하는 만큼의 성능이 안 나올 시, autogluon 결과를 토대로 다른 모델을 강구해야 할 수 있음
 
+### train log 
+**autoGluon result**
+In order of (hyperparam, stack and bag num, train hour, evaluation metric for train, etc)
+1. RMSE: 3615.5786537397207, R2_score: 0.9999623472368988 (default, default, 1hr, RMSE, suspecting bug in the code: nope)
+2. RMSE: 7039.3037549989185, R2_score: 0.9998572748078142 (GBM(lightGBM), 2, 1hr, RMSE)
 ## Citation:
 #### Erickson, Nick, et al. "AutoGluon-Tabular: Robust and Accurate AutoML for Structured Data." 
 #### arXiv preprint arXiv:2003.06505 (2020).
