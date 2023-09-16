@@ -8,3 +8,4 @@ sample/
 
 # autogluon result
 autogluonModels/
+autogluon_model_logs/

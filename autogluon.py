@@ -8,7 +8,7 @@ from autogluon.tabular import TabularDataset, TabularPredictor
 import pandas as pd
 import os
 
-train_df = pd.read_csv('./2023_smartFarm_AI_hackathon_dataset.csv') # input for train dataset
+train_df = pd.read_csv('2023_smartFarm_AI_hackathon_dataset.csv') # input for train dataset
 # test_data = pd.read_csv('./test data location.csv')
 train_data = TabularDataset(train_df)
 time_limit = 3600 * 1 # hrs
@@ -17,23 +17,23 @@ label = 'HeatingEnergyUsage_cumsum'
 # 'r2' for r2 score & 'root_mean_squared_error' for RMSE
 eval_metric = 'accuracy' 
 r2_metric = 'r2'
-rmse_metic = 'root_mean_squared_error'
+rmse_metric = 'root_mean_squared_error'
 
 output_directory = './autogluon_model_logs' # output directory
 predictor_directory = './autogluon_model_predict' # predictore directory
 
 # autogluon train
 predictor = TabularPredictor(
-    label=label, eval_metric=rmse_metic
+    label=label, eval_metric=rmse_metric
 ).fit(
     train_data,
     presets='best_quality', 
     time_limit=time_limit, 
-    ag_args_fit={'num_gpus': 0, 'num_cpus': 8}
+    ag_args_fit={'num_gpus': 0, 'num_cpus': 8},
     # training for a specific model ref: 'https://auto.gluon.ai/stable/api/autogluon.tabular.TabularPredictor.fit.html'
-    # hyperparameters={'GBM': {}},
-    # num_bag_folds=2,      
-    # num_stack_levels=2,
+    hyperparameters={'GBM': {}},
+    num_bag_folds=2,      
+    num_stack_levels=2,
     )
 
 # extra train
